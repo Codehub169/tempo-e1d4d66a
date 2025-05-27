@@ -1,0 +1,70 @@
+/* frontend/src/components/ScrollIndicator/ScrollIndicator.module.css */
+
+.scrollIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  outline: none; /* Remove default focus outline, manage focus style if needed */
+}
+
+.scrollIndicator:hover,
+.scrollIndicator:focus {
+  opacity: 0.7;
+}
+
+/* For custom focus indication if desired, e.g.:
+.scrollIndicator:focus .arrow {
+  border-color: var(--color-accent-steel-blue); 
+}
+*/
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  /* Using --color-neutral-dark as --color-neutral-dark-grey is not consistently defined in App.css */
+  /* Fallback provided in case --color-neutral-dark is not available. */
+  border: solid var(--color-neutral-dark, #A9A9A9);
+  border-width: 0 3px 3px 0; /* Creates the arrow shape (bottom and right borders) */
+  transform: rotate(45deg); /* Points the arrow downwards */
+  animation: bounce 2s infinite ease-in-out;
+}
+
+/* 
+  If using multiple arrows for a chevron effect, you might uncomment and adjust:
+.scrollIndicator .arrow:nth-child(1) {
+  animation-delay: 0s;
+}
+.scrollIndicator .arrow:nth-child(2) {
+  animation-delay: -0.2s;
+  margin-top: -12px; 
+}
+.scrollIndicator .arrow:nth-child(3) {
+  animation-delay: -0.4s;
+  margin-top: -12px; 
+}
+*/
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(45deg); /* Arrow moves up */
+  }
+  60% {
+    transform: translateY(-5px) rotate(45deg); /* Arrow moves slightly up */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .arrow {
+    width: 16px;
+    height: 16px;
+    border-width: 0 2.5px 2.5px 0;
+  }
+}
