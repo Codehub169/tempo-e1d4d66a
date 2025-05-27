@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.letWorkTogetherSection {
+  padding: 80px 40px;
+  background-color: var(--color-neutral-light-grey, #E0E0E0);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-top: 1px solid var(--color-neutral-dark-grey);
+}
+
+.sectionTitle {
+  font-family: var(--font-secondary, 'Playfair Display'), serif;
+  font-size: 2.8rem;
+  color: var(--color-neutral-dark-grey);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  .contactWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.contactFormContainer {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+  border: 1px solid var(--color-neutral-beige);
+  /* Simulates a notepad feel */
+  background-image: linear-gradient(var(--color-neutral-beige) 1px, transparent 1px);
+  background-size: 100% 2em; /* Line height for notepad lines */
+  line-height: 2em;
+}
+
+.contactFormContainer::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-accent-tomato);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 7px var(--color-accent-tomato);
+  display: none; /* Keep it subtle, enable if desired */
+}
+
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  display: block;
+  font-family: var(--font-primary, 'Montserrat'), sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-neutral-dark-grey);
+  margin-bottom: 8px;
+  font-weight: 600;
+  padding-left: 5px; /* Align with input padding */
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--color-neutral-light-grey);
+  border-radius: 8px;
+  font-family: 'Caveat', cursive; /* Playful handwriting font for inputs */
+  font-size: 1.3rem;
+  color: var(--color-neutral-dark-grey);
+  background-color: transparent; /* To see the lines */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-accent-steel-blue);
+  box-shadow: 0 0 0 3px rgba(70, 130, 180, 0.2);
+}
+
+.formGroup textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5em; /* Adjust for Caveat font readability */
+}
+
+.submitButton {
+  background-color: var(--color-accent-tomato);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--font-primary, 'Montserrat'), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.submitButton:hover {
+  background-color: #e55337; /* Darker Tomato */
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  background-color: var(--color-neutral-grey);
+  cursor: not-allowed;
+}
+
+.contactInfo {
+  text-align: center;
+  padding-top: 20px;
+  max-width: 300px; /* Limit width for better layout */
+  width: 100%;
+}
+
+.contactInfo p {
+  font-family: var(--font-primary, 'Montserrat'), sans-serif;
+  font-size: 1rem;
+  color: var(--color-neutral-dark-grey);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contactInfo a {
+  color: var(--color-accent-steel-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contactInfo a:hover {
+  color: var(--color-accent-yellow-green);
+  text-decoration: underline;
+}
+
+.instagramLink {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.whoKnewVisualContainer {
+  margin-top: 20px;
+}
+
+.whoKnewImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: 3px solid var(--color-accent-yellow-green);
+}
+
+.servicesDeckLink {
+  display: block;
+  margin-top: 15px;
+  font-family: var(--font-primary, 'Montserrat'), sans-serif;
+  font-size: 0.9rem;
+}
+
+.formMessage {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: var(--font-primary, 'Montserrat'), sans-serif;
+    font-size: 0.9rem;
+}
+
+.successMessage {
+    background-color: var(--color-accent-yellow-green-light, #e6f5c8);
+    color: var(--color-accent-yellow-green-dark, #577700);
+    border: 1px solid var(--color-accent-yellow-green, #9ACD32);
+}
+
+.errorMessage {
+    background-color: var(--color-accent-tomato-light, #ffe0d8);
+    color: var(--color-accent-tomato-dark, #a52a2a);
+    border: 1px solid var(--color-accent-tomato, #FF6347);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .letWorkTogetherSection {
+    padding: 60px 20px;
+  }
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+  .contactFormContainer {
+    padding: 30px;
+  }
+  .contactWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .contactInfo {
+    padding-top: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 1.1rem;
+  }
+  .submitButton {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}

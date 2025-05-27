@@ -1,0 +1,100 @@
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-neutral-beige); /* Primary neutral background */
+  padding: 20px;
+  text-align: center;
+  position: relative; /* For positioning the scroll indicator */
+  overflow: hidden; /* To contain any animations */
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px; /* Limit width of text content for readability */
+  width: 100%;
+}
+
+.logoContainer {
+  margin-bottom: 40px; /* Space between logo and tagline */
+  /* Dimensions and specific styling for AnimatedLogo might be within AnimatedLogo.module.css */
+  /* Example placeholder size if needed here */
+  /* width: 150px; */
+  /* height: 100px; */
+}
+
+.tagline {
+  font-family: var(--font-secondary); /* Playfair Display or similar for personality */
+  font-size: 3.5rem; /* Large and impactful */
+  color: var(--color-neutral-dark-grey);
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.subtext {
+  font-family: var(--font-primary); /* Montserrat for clarity */
+  font-size: 1.25rem;
+  color: var(--color-neutral-dark-grey);
+  opacity: 0.85; /* Slightly subdued */
+  max-width: 500px; /* Keep subtext line length manageable */
+  line-height: 1.6;
+  margin-bottom: 60px; /* Space before scroll indicator might appear */
+}
+
+.scrollIndicatorContainer {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .tagline {
+    font-size: 3rem;
+  }
+  .subtext {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding-top: 80px; /* Add padding for smaller screens if header is fixed or overlaps */
+    padding-bottom: 80px; /* Ensure space for scroll indicator */
+  }
+  .logoContainer {
+    margin-bottom: 30px;
+  }
+  .tagline {
+    font-size: 2.5rem;
+  }
+  .subtext {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  .scrollIndicatorContainer {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 2rem;
+    letter-spacing: normal;
+  }
+  .subtext {
+    font-size: 1rem;
+  }
+   .logoContainer {
+    /* Adjust logo size if needed for very small screens via its own styles or a wrapper */
+    /* e.g., width: 120px; */
+  }
+}

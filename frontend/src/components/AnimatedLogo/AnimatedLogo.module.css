@@ -1,0 +1,40 @@
+.animatedLogoContainer {
+  display: inline-block;
+  width: 150px; /* Default width, can be adjusted via props or more specific selectors */
+  height: auto;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScaleUp 1.5s 0.5s ease-out forwards;
+}
+
+.logoSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: var(--color-neutral-dark-grey); /* Or a specific logo color */
+}
+
+/* Animation for the logo reveal */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animatedLogoContainer {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animatedLogoContainer {
+    width: 100px;
+  }
+}

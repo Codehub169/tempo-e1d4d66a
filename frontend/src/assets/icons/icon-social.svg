@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Social Media Icon</title>
+  <!-- Interconnected circles representing social networks -->
+  <circle cx="35" cy="35" r="15" />
+  <circle cx="65" cy="35" r="12" fill="var(--color-accent-tomato-semi-transparent)" stroke-width="2"/>
+  <circle cx="50" cy="65" r="18" />
+  <line x1="45" y1="45" x2="55" y2="55" />
+  <line x1="42" y1="50" x2="50" y2="42" /> 
+</svg>
